@@ -1,0 +1,32 @@
+<!--for searched movie  (start)-->
+<html>
+    <head>
+            <script src="script.js"></script>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        
+        </head>
+        <body>
+                 
+                            <div id="search_bar">
+                                
+                                <button type="button" class="btn btn-primary each_img" (click)=movie(0)>
+                                </button>
+                                <button type="button" class="btn btn-primary each_img" (click)=movie(1)>
+                                </button>
+                                <button type="button" class="btn btn-primary each_img" (click)=movie(2)>
+                                </button>
+                                <button type="button" class="btn btn-primary each_img" (click)=movie(3)>
+                                </button>
+                              
+                            
+                              <ul class="pager">  
+                                <li class="next"><a class="page-link" (click)="onNext()">Next</a></li>
+                                <li class="previous"><a class="page-link" (click)="onPrevious()">Previous</a></li>  
+                                  
+                                </ul>
+                    
+                          </div>
+                                               
+</body>
+</html>  
