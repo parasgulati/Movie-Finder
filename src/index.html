@@ -12,12 +12,7 @@
     z-index:5;
     
 }      
-.g-signin2
-{
-  
-    margin-left:35%;
-    margin-top:20%;
-}
+
 .text-center
 {
   text-align:center;
@@ -31,60 +26,12 @@
 }
       </style>
 
-<meta name="google-signin-scope" content="profile email">
-<meta name="google-signin-client_id" content="1050058999653-4eovv9301u87shjo8mkjmus14140h867.apps.googleusercontent.com">
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>  
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-        var visitor_information={
-          id:'xyz',
-          name:'xyz',
-          email:'xyz',
-          time:'xyz'
-        }
-        function onSignIn(googleUser) 
-        {
-          
-          var profile = googleUser.getBasicProfile();
-          console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-          console.log('Name: ' + profile.getName());
-          console.log('Image URL: ' + profile.getImageUrl());
-          console.log('Email: ' + profile.getEmail());
-          console.log('Time:'+new Date());    
-          visitor_information.id=profile.getId();
-          visitor_information.name=profile.getName();
-          visitor_information.email=profile.getEmail();
-          visitor_information.time=new Date();
-               PutOnServer();
-        
-           document.getElementsByClassName('overlay')[0].style="visibility:hidden";
-        } 
-        function PutOnServer()
-        { 
-          $.ajax({
-          url:"'https://moviefinderrestapi.herokuapp.com/set",
-          type:"GET",
-          data: {
-                id:visitor_information.id,
-                name:visitor_information.name,
-                email:visitor_information.email,
-                time:visitor_information.time
-              },
-          success: function()
-          {
-            console.log("success");
-          }
-              });    
-        }   
-</script>
+
 </head>
 <body>
-  <!--
-    <div class="overlay text-center">
-          <div id="GoogleLoginText text-center">You Need to Login to Access this site !</div> 
-           <div class="g-signin2" data-onsuccess="onSignIn"></div>
-    </div>-->
   
 <app-root></app-root>  
 </body>
